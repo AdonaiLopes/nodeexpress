@@ -9,14 +9,25 @@ let listProducts = [
   {
     id: 1,
     name: 'Product 1',
-    price: 10
+    price: 10,
+    descripton: 'descrição do produto 1'
   },
   {
     id: 2,
     name: 'Product 2',
-    price: 100
+    price: 100,
+    description: 'descrição do produto 2'
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: 1000,
+    description: 'descrição do produto 3'
   }
+
 ];
+
+
 
 
 nunjucks.configure('views', {
@@ -42,6 +53,10 @@ app.get('/products', (req, res) => {
 
 app.get('/contact', (req, res) => {
   res.render('contact.html');
+});
+
+app.get('/doni', (req, res) => {
+  res.render('doni.html');
 });
 
 app.post('/send', (req, res) => {
